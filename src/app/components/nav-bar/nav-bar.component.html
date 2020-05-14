@@ -1,0 +1,53 @@
+<a id="touch-menu" class="mobile-menu" (click)="toggle()">Ресторан Vience Amore</a>
+
+<nav>
+  <div id="menuS">
+    <ul id="menu-uamenu" class="menu" [style.display]="visibility==true?'block':'none'">
+
+      <li class="home menu-item">
+        <a routerLink="/"> </a>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="about-us">Про нас</a>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="menu">Меню</a>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="bar">БАР</a>
+      </li>
+
+      <li class="menu-item menu-item-has-children">
+        <a routerLink="provedennya-banketiv">Банкети</a>
+
+        <ul class="sub-menu">
+          <li class="menu-item">
+            <a routerLink="provedennya-banketiv/vesillya-u-restorani">ВЕСІЛЛЯ</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="provedennya-banketiv/korporativi-v-restorani">КОРПОРАТИВ</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="provedennya-banketiv/den-narodzhennya-u-restorani">ДЕНЬ НАРОДЖЕННЯ</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="galereya">Галерея</a>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="category">Новини та акції</a>
+      </li>
+
+      <li class="menu-item">
+        <a routerLink="contacts">Контакти</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

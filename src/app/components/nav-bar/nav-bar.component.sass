@@ -1,0 +1,242 @@
+#menuS
+  top: 176px
+  left: 0
+  right: 0
+  background: #39304b
+  margin: 20px -183px
+  padding: 0 183px
+
+nav
+  display: block
+  margin-top: 0
+  background: #3E4156
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.menu
+  display: block
+
+  li
+    display: inline-block
+    position: relative
+    z-index: 1
+    padding: 0 16px
+    padding-bottom: 5px
+
+    &:first-child
+      margin-left: 0
+
+    a
+      color: #cec0b3
+      font: 18px Cambria Math
+      display: block
+      line-height: 46px
+      text-transform: uppercase
+      text-decoration: none
+      padding-left: 17px
+      padding-top: 3px
+      background: url("src/images/a1.png") no-repeat left
+      white-space: nowrap
+      -webkit-transition: all 0.2s ease-in-out 0s
+      -moz-transition: all 0.2s ease-in-out 0s
+      -o-transition: all 0.2s ease-in-out 0s
+      -ms-transition: all 0.2s ease-in-out 0s
+      transition: all 0.2s ease-in-out 0s
+
+    &.home > a
+      background: url("src/images/home_icon.png") no-repeat top 17px center
+      width: 17px
+      height: 47px
+      padding-left: 5px !important
+      padding-right: 5px !important
+
+    &:hover, &.current-menu-item, &:hover, &.current-page-ancestor, &:hover, &.current-menu-parent
+      background: #483f5c
+
+      > a
+        background: none !important
+        padding-left: 0px !important
+
+  ul
+    display: none
+    margin: 0
+    padding: 0
+    width: 290px
+    position: absolute
+    top: 53px
+    left: 0px
+    background: #FFFFFF
+
+    li
+      display: block
+      float: none
+      background: none
+      margin: 0
+      padding: 0
+
+      a
+        color: #cec0a2
+        font: 16px Cambria Math
+        display: block
+        line-height: 36px
+        text-transform: uppercase
+        text-decoration: none
+        padding: 0 40px 0 20px
+        border-bottom: 1px solid #615776
+        background: #483f5c
+
+        &:hover
+          background: #39304b
+          margin: 0
+          padding: 10px  0px 0px 0px
+
+      &:hover > a
+        background: #39304b
+        margin: 0
+        padding: 10px  0px 0px 0px
+
+  li:hover > ul
+    display: block
+
+  ul ul
+    left: 149px
+    top: 0px
+
+.mobile-menu
+  display: none
+  width: 100%
+  padding: 11px
+  color: #ffffff
+  text-transform: uppercase
+  font-weight: 600
+  background: url("src/images/mob_menu.png") #3E4156 no-repeat top 10px left 10px
+  padding-left: 45px
+
+  &:hover
+    background: #414564
+    color: #ffffff
+    text-decoration: none
+    background: url("src/images/mob_menu.png") #414564 no-repeat top 10px left 10px
+
+@media (max-width: 769px)
+  #top_line_top, #top_line_bot, #collage
+    display: none
+
+  #collage_mob
+    display: block
+    position: relative
+    margin: 10px 0 20px 0
+
+  #menuS
+    position: absolute
+    top: 40px
+    left: 0
+    right: 0
+    background: none
+    height: 60px
+
+  .mainWrap
+    width: auto
+    padding: 50px 20px
+
+  .menu
+    display: none
+
+  .mobile-menu
+    position: absolute
+    top: 0
+    display: block
+    margin-top: 0px
+    z-index: 999999
+
+  nav
+    margin: 0
+    background: none
+
+  .menu
+    li
+      display: block
+      margin: 0
+      background: none
+
+      a
+        background: #f0f0f0
+        color: #3e3651
+        margin: 0
+
+        &:hover
+          background: #b7b3c2
+          color: #3e3651
+
+      &:hover > a
+        background: #b7b3c2
+        color: #3e3651
+
+      &.home > a, &.rus
+        display: none
+
+    ul
+      display: block
+      position: relative
+      top: 0
+      left: 0
+      width: 100%
+
+    li
+      background: rgba(255, 255, 255, 0.85) !important
+
+    ul
+      li
+        a
+          background: #e4e0df
+          color: #483f5c !important
+          border-bottom: 1px solid #a9a6b1 !important
+
+          &:hover
+            background: #d5d3d2
+            margin: 0
+            padding: 10px  0px 0px 0px
+
+        &:hover > a
+          background: #d5d3d2
+          margin: 0
+          padding: 10px  0px 0px 0px
+
+      ul
+        left: 0
+
+  #lang_version
+    display: block
+    position: absolute
+    top: 12px
+    right: 8px
+    z-index: 9999999999999
+    font-size: 15px
+
+    a
+      border: 1px solid white
+      border-radius: 5px
+      padding: 3px 7px 3px 7px
+      color: white
+
+      &:hover
+        background: #DDD
+
+@media screen and (max-width: 414px)
+  .article img
+    float: left
+    margin-right: 20px
+    border: none
+    margin-bottom: 10px
+    width: 100%
+
+  .entry img
+    width: 100%
+    height: auto
+    float: left
+    background: #eeebe6
+    padding: 0px
+    margin: 0 0 10px 0
