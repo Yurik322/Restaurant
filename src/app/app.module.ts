@@ -18,6 +18,11 @@ import {HttpClientModule} from "@angular/common/http";
 import { WeddingsComponent } from './components/weddings/weddings.component';
 import { CorporatepartiesComponent } from './components/corporateparties/corporateparties.component';
 import { BirthdaysComponent } from './components/birthdays/birthdays.component';
+import { DrinksComponent } from './components/drinks/drinks.component';
+import { WinesComponent } from './components/wines/wines.component';
+import { AppetizersComponent } from './components/appetizers/appetizers.component';
+import { MaindishesComponent } from './components/maindishes/maindishes.component';
+import { DesertsComponent } from './components/deserts/deserts.component';
 
 
 @NgModule({
@@ -37,7 +42,12 @@ import { BirthdaysComponent } from './components/birthdays/birthdays.component';
     NavBarComponent,
     WeddingsComponent,
     CorporatepartiesComponent,
-    BirthdaysComponent
+    BirthdaysComponent,
+    DrinksComponent,
+    WinesComponent,
+    AppetizersComponent,
+    MaindishesComponent,
+    DesertsComponent
   ],
   imports: [
     HttpClientModule,
