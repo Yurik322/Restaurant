@@ -11,6 +11,9 @@ import {ContactsComponent} from "./components/contacts/contacts.component";
 import {OrderTableComponent} from "./components/order-table/order-table.component";
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
+import {WeddingsComponent} from "./components/weddings/weddings.component";
+import {CorporatepartiesComponent} from "./components/corporateparties/corporateparties.component";
+import {BirthdaysComponent} from "./components/birthdays/birthdays.component";
 
 
 const routes: Routes = [
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path: 'category', component: CategoryComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'order-table', component: OrderTableComponent},
+  {path: 'weddings', component: WeddingsComponent},
+  {path: 'corporateparties', component: CorporatepartiesComponent},
+  {path: 'birthdays', component: BirthdaysComponent},
   {path: 'header', component: HeaderComponent},
   {path: 'footer', component: FooterComponent}
 ];

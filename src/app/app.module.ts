@@ -15,6 +15,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {HttpClientModule} from "@angular/common/http";
+import { WeddingsComponent } from './components/weddings/weddings.component';
+import { CorporatepartiesComponent } from './components/corporateparties/corporateparties.component';
+import { BirthdaysComponent } from './components/birthdays/birthdays.component';
 
 
 @NgModule({
@@ -31,12 +34,15 @@ import {HttpClientModule} from "@angular/common/http";
     OrderTableComponent,
     HeaderComponent,
     FooterComponent,
-    NavBarComponent
+    NavBarComponent,
+    WeddingsComponent,
+    CorporatepartiesComponent,
+    BirthdaysComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
