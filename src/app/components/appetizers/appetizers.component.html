@@ -2,47 +2,26 @@
   <div class="container-fluid text-center">
     <h1>ЗАКУСКИ</h1><br>
 
-
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+
+        <div *ngFor="let appetizer of Appetizers" class="col-sm-4 fack text-center">
+
+          <div class="thumbnail allAppetizers">
+
+            <a (click)="getId(appetizer.id)"><img [src]=appetizer.img alt=""  width="400" height="300"><br>
+              Детальніше
+            </a>
+
+            <h2>{{appetizer.name}}</h2>
+            <h3>{{appetizer.gram}}</h3>
+            <h4>{{appetizer.money}}</h4>
+
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          </div>
-        </div>
+
       </div>
     </div><br>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel">
-            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-          </div>
-        </div>
-      </div>
-    </div><br>
-
 
   </div>
   <br>

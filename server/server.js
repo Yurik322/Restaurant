@@ -1,32 +1,34 @@
 ﻿'use strict'
-
+const path = require('path')
 const express = require('express')
-const logger = require('morgan')
-const bodyParser = require('body-parser')
+const cors = require('cors')
+const app = express();
+const bodyParser = require('body-parser');
 const config = require('./config')
-require('./db')(config)
 
-const notFoundMiddleware = require('./middlewares/not_found')
-const corsMiddleware = require('cors')
+const url = "mongodb://localhost:27017/restaurantdb";
 
-// const indexRoutes = require('./routes')
-// const locationRoutes = require('./routes/location')
-// const locationTypeRoutes = require('./routes/location_type')
+app.use(cors());
 
-const app = express()
+app.use(bodyParser.json());
 
-app.use(logger('dev'))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname))
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.static(path.join(__dirname, 'static')));
 
-app.use(corsMiddleware());
-// app.use('/', indexRoutes)
-// app.use('/location', locationRoutes)
-// app.use('/location-type', locationTypeRoutes)
+const mongoose = require("mongoose");
+const connect = mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
 
-app.use(notFoundMiddleware)
+app.get('/', (req, res) => {
+  res.send('hello')
+})
+
+//Routes
+app.use('/api', require('./routes/appetizers'));
 
 const { host, port } = config
 

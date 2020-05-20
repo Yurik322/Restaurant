@@ -21,6 +21,7 @@ import {MaindishesComponent} from "./components/maindishes/maindishes.component"
 import {DesertsComponent} from "./components/deserts/deserts.component";
 
 
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-us', component: AboutUsComponent},
@@ -36,7 +37,7 @@ const routes: Routes = [
   {path: 'birthdays', component: BirthdaysComponent},
   {path: 'wines', component: WinesComponent},
   {path: 'drinks', component: DrinksComponent},
-  {path: 'appetizer', component: AppetizersComponent},
+  {path: 'appetizers', component: AppetizersComponent},
   {path: 'maindishes', component: MaindishesComponent},
   {path: 'deserts', component: DesertsComponent},
   {path: 'header', component: HeaderComponent},
