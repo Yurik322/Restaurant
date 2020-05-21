@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GalereyaComponent } from './galereya.component';
+import { GalereyaComponent } from './galleries.component';
 
 describe('GalereyaComponent', () => {
   let component: GalereyaComponent;

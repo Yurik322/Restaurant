@@ -5,7 +5,7 @@ import {AboutUsComponent} from "./components/about-us/about-us.component";
 import {MenuComponent} from "./components/menu/menu.component";
 import {BarComponent} from "./components/bar/bar.component";
 import {ProvedennyaBanketivComponent} from "./components/provedennya-banketiv/provedennya-banketiv.component";
-import {GalereyaComponent} from "./components/galereya/galereya.component";
+import {GalleriesComponent} from "./components/galleries/galleries.component";
 import {CategoryComponent} from "./components/category/category.component";
 import {ContactsComponent} from "./components/contacts/contacts.component";
 import {OrderTableComponent} from "./components/order-table/order-table.component";
@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'menu', component: MenuComponent},
   {path: 'bar', component: BarComponent},
   {path: 'provedennya-banketiv', component: ProvedennyaBanketivComponent},
-  {path: 'galereya', component: GalereyaComponent},
+  {path: 'galleries', component: GalleriesComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'order-table', component: OrderTableComponent},

@@ -36,6 +36,7 @@ app.use('/api', require('./routes/drinks'));
 app.use('/api', require('./routes/weddings'));
 app.use('/api', require('./routes/corporateparties'));
 app.use('/api', require('./routes/birthdays'));
+app.use('/api', require('./routes/galleries'));
 
 const { host, port } = config
 

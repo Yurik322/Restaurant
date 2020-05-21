@@ -6,7 +6,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BarComponent } from './components/bar/bar.component';
 import { ProvedennyaBanketivComponent } from './components/provedennya-banketiv/provedennya-banketiv.component';
-import { GalereyaComponent } from './components/galereya/galereya.component';
+import { GalleriesComponent } from './components/galleries/galleries.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { OrderTableComponent } from './components/order-table/order-table.component';
@@ -33,7 +33,7 @@ import { DesertsComponent } from './components/deserts/deserts.component';
     MenuComponent,
     BarComponent,
     ProvedennyaBanketivComponent,
-    GalereyaComponent,
+    GalleriesComponent,
     CategoryComponent,
     ContactsComponent,
     OrderTableComponent,
