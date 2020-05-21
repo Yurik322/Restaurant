@@ -1,70 +1,81 @@
-<div id="content" class="back">
+<div id="content" class="back container-fluid">
+
+  <div class="col-sm-6">
   <div class="title">
     <h1>Забронювати столик</h1>
   </div>
-  <div class="article" style="text-align:justify ">
-    <p>Залиште Ваш номер телефону і ім’я. Наш менеджер зв’яжеться з Вами найближчим часом для підтвердження
+
+  <div class="article">
+    <p>
+      Залиште Ваш номер телефону і ім’я. Наш менеджер зв’яжеться з Вами найближчим часом для підтвердження
       замовлення.<br>
     </p>
-    <div role="form" class="wpcf7" id="wpcf7-f2156-p2157-o1">
-      <div class="screen-reader-response"></div>
+    <div role="form">
+
+      <form #records="ngForm" (ngSubmit)="success()" class="form">
+        <div>
+          <p>
+            <label> Ваше ім'я*<br>
+              <span>
+                <input required [(ngModel)]="record.name" type="text" name="your-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Введіть ім'я">
+              </span>
+            </label>
+          </p>
+
+          <p>
+            <label> Ваш телефон*<br>
+              <span>
+                <input required [(ngModel)]="record.phone" type="tel" name="tel-865" size="40" aria-required="true" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+
+          <p>
+            <label> Вкажіть бажану дату<br>
+              <span>
+                <input required [(ngModel)]="record.date" type="date" name="date-212" value="" aria-invalid="false">
+              </span>
+            </label>
+          </p>
+
+          <p>
+            <label> Час<br>
+              <span>
+                <input required [(ngModel)]="record.time" type="text" name="text-782" value="" size="40" aria-invalid="false" placeholder="12:00 - 04:00">
+              </span>
+            </label>
+          </p>
+
+          <p>
+            <label> Кількість гостей<br>
+              <span>
+                <input required [(ngModel)]="record.quality" type="number" min="1" max="200" aria-invalid="false">
+              </span>
+            </label>
+          </p>
 
 
-
-      <form #records="ngForm" (ngSubmit)="success()" class="form" novalidate="novalidate">
-        <div class="contact-form-cl">
-          <label> Ваше ім'я*<br>
-            <span class="wpcf7-form-control-wrap your-name">
-              <input required [(ngModel)]="record.name" type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                   aria-required="true" aria-invalid="false"
-                                                                   placeholder="Введить ім'я">
-            </span> </label>
-          <p></p>
-
-          <p><label> Ваш телефон*<br>
-            <span class="wpcf7-form-control-wrap tel-865">
-              <input required [(ngModel)]="record.phone"  type="tel" name="tel-865" value="+380" size="40"
-                                                                 class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-                                                                 aria-required="true" aria-invalid="false"></span>
-          </label></p>
-
-          <p><label> Вкажіть бажану дату<br>
-            <span class="wpcf7-form-control-wrap date-212">
-              <input required [(ngModel)]="record.date" type="date" name="date-212" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date"
-                                                                  aria-invalid="false"></span> </label></p>
-
-          <p><label> Час<br>
-            <span class="wpcf7-form-control-wrap text-782">
-              <input required [(ngModel)]="record.time" type="text" name="text-782" value="" size="40"
-                                                                  class="wpcf7-form-control wpcf7-text"
-                                                                  aria-invalid="false"
-                                                                  placeholder="12:00 - 04:00"></span></label></p>
-
-          <p><label> Кількість гостей<br>
-            <span class="wpcf7-form-control-wrap number-714">
-              <input required [(ngModel)]="record.quality" type="number" name="number-714" value=""
-                                                                    class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
-                                                                    min="1" max="200"
-                                                                    aria-invalid="false"></span></label></p>
-
-
-
-          <p><input required [disabled]="records.invalid || diss" type="submit" value="Надіслати" class="wpcf7-form-control wpcf7-submit"><span
-            class="ajax-loader"></span>
+          <p>
+            <input required [disabled]="records.invalid || diss" type="submit" class="btn btn-success" value="Надіслати" width="200px">
           </p>
         </div>
-
-
 
         <div *ngIf="diss" class="alert alert-success">
           <strong>Успішно!</strong> Дякуємо! Очікуйте дзвінок адміністратора для підтвердження вашого резервування.
         </div>
 
-
-        <div class="wpcf7-response-output wpcf7-display-none"></div>
-
       </form>
     </div>
     <p></p>
+  </div>
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="container-fluid">
+      <br>
+      <img src="" class="reservation img-responsive" width="100%" alt="">
+    </div>
+
   </div>
 </div>

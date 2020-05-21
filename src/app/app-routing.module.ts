@@ -48,7 +48,6 @@ const routes: Routes = [
   {path: 'deserts', component: DesertsComponent},
   {path: 'header', component: HeaderComponent},
   {path: 'footer', component: FooterComponent},
-
   //TODO
   {path: 'appetizers/:id', component: SingleAppetizerComponent},
   {path: 'maindishes/:id', component: SingleMaindishesComponent},
