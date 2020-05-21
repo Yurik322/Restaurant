@@ -19,6 +19,7 @@ import {DrinksComponent} from "./components/drinks/drinks.component";
 import {AppetizersComponent} from "./components/appetizers/appetizers.component";
 import {MaindishesComponent} from "./components/maindishes/maindishes.component";
 import {DesertsComponent} from "./components/deserts/deserts.component";
+import {SingleitemComponent} from "./components/singleitem/singleitem.component";
 
 
 
@@ -41,7 +42,11 @@ const routes: Routes = [
   {path: 'maindishes', component: MaindishesComponent},
   {path: 'deserts', component: DesertsComponent},
   {path: 'header', component: HeaderComponent},
-  {path: 'footer', component: FooterComponent}
+  {path: 'footer', component: FooterComponent},
+
+  //TODO
+  {path: 'appetizers/:id', component: SingleitemComponent}
+
 ];
 
 @NgModule({

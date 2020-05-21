@@ -38,6 +38,8 @@ app.use('/api', require('./routes/corporateparties'));
 app.use('/api', require('./routes/birthdays'));
 app.use('/api', require('./routes/galleries'));
 
+app.use('/api/reservations', require('./routes/reservations'));
+
 const { host, port } = config
 
 app.listen(port, host, () => {

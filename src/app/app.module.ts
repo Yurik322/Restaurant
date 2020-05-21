@@ -23,6 +23,8 @@ import { WinesComponent } from './components/wines/wines.component';
 import { AppetizersComponent } from './components/appetizers/appetizers.component';
 import { MaindishesComponent } from './components/maindishes/maindishes.component';
 import { DesertsComponent } from './components/deserts/deserts.component';
+import {FormsModule} from "@angular/forms";
+import { SingleitemComponent } from './components/singleitem/singleitem.component';
 
 
 @NgModule({
@@ -47,13 +49,15 @@ import { DesertsComponent } from './components/deserts/deserts.component';
     WinesComponent,
     AppetizersComponent,
     MaindishesComponent,
-    DesertsComponent
+    DesertsComponent,
+    SingleitemComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

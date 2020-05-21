@@ -16,13 +16,18 @@ router.get('/appetizers', (req, res)=>{
 
 });
 
+
 router.get('/appetizers/:id', (req, res)=>{
 
 
   (async () => {
-    let rest = await Appetizer.findOne({id: req.params.id});
+    let rest = await Appetizer.find({id: req.params.id});
     console.log(rest);
+    console.log(req.params.id);
+
     res.send(rest)
+
+
 
   })();
 
