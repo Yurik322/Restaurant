@@ -16,7 +16,7 @@ export class GalleriesService {
     return this.http.get(`${config.HOST}/galleries`);
   }
 
-  getById(id: number): Observable<any>{
+  getByGalleriesId(id: number): Observable<any>{
     return this.http.get(`${config.HOST}/galleries/${id}`);
   }
 }

@@ -16,7 +16,7 @@ export class DesertsService {
     return this.http.get(`${config.HOST}/deserts`);
   }
 
-  getById(id: number): Observable<any>{
+  getByDesertsId(id: number): Observable<any>{
     return this.http.get(`${config.HOST}/deserts/${id}`);
   }
 }

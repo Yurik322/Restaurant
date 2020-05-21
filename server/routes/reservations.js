@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//const mongoose = require("mongoose");
 const { Reservation } = require("../models/reservations");
 
 router.post('/', (req, res)=>{
@@ -8,7 +7,7 @@ router.post('/', (req, res)=>{
   (async () => {
 
 
-    console.log(req.body)
+    //console.log(req.body)
 
     Reservation.create({
       name: req.body.name,

@@ -16,7 +16,7 @@ export class MaindishesService {
     return this.http.get(`${config.HOST}/maindishes`);
   }
 
-  getById(id: number): Observable<any>{
+  getByMaindishesId(id: number): Observable<any>{
     return this.http.get(`${config.HOST}/maindishes/${id}`);
   }
 }

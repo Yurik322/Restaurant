@@ -16,7 +16,7 @@ export class WinesService {
     return this.http.get(`${config.HOST}/wines`);
   }
 
-  getById(id: number): Observable<any>{
+  getByWinesId(id: number): Observable<any>{
     return this.http.get(`${config.HOST}/wines/${id}`);
   }
 }

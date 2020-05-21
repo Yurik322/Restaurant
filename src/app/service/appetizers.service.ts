@@ -16,7 +16,7 @@ export class AppetizersService {
     return this.http.get(`${config.HOST}/appetizers`);
   }
 
-  getById(id: number): Observable<any>{
+  getByAppetizersId(id: number): Observable<any>{
     return this.http.get(`${config.HOST}/appetizers/${id}`);
   }
 }

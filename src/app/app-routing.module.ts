@@ -19,7 +19,12 @@ import {DrinksComponent} from "./components/drinks/drinks.component";
 import {AppetizersComponent} from "./components/appetizers/appetizers.component";
 import {MaindishesComponent} from "./components/maindishes/maindishes.component";
 import {DesertsComponent} from "./components/deserts/deserts.component";
-import {SingleitemComponent} from "./components/singleitem/singleitem.component";
+import {SingleAppetizerComponent} from "./components/single-appetizers/single-appetizer.component";
+import {SingleMaindishesComponent} from "./components/single-maindishes/single-maindishes.component";
+import {SingleDesertsComponent} from "./components/single-deserts/single-deserts.component";
+import {SingleWinesComponent} from "./components/single-wines/single-wines.component";
+import {SingleDrinksComponent} from "./components/single-drinks/single-drinks.component";
+import {SingleGalleriesComponent} from "./components/single-galleries/single-galleries.component";
 
 
 
@@ -45,8 +50,12 @@ const routes: Routes = [
   {path: 'footer', component: FooterComponent},
 
   //TODO
-  {path: 'appetizers/:id', component: SingleitemComponent}
-
+  {path: 'appetizers/:id', component: SingleAppetizerComponent},
+  {path: 'maindishes/:id', component: SingleMaindishesComponent},
+  {path: 'deserts/:id', component: SingleDesertsComponent},
+  {path: 'wines/:id', component: SingleWinesComponent},
+  {path: 'drinks/:id', component: SingleDrinksComponent},
+  {path: 'galleries/:id', component: SingleGalleriesComponent}
 ];
 
 @NgModule({

@@ -4,11 +4,8 @@ const { Galleries } = require("../models/galleries");
 
 router.get('/galleries', (req, res)=>{
 
-
-
   (async () => {
     let rest = await Galleries.find({});
-    console.log(rest);
     res.send(rest)
 
   })();
@@ -17,12 +14,9 @@ router.get('/galleries', (req, res)=>{
 
 router.get('/galleries/:id', (req, res)=>{
 
-
   (async () => {
     let rest = await Galleries.findOne({id: req.params.id});
-    console.log(rest);
     res.send(rest)
-
   })();
 
 });

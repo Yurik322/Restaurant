@@ -24,7 +24,12 @@ import { AppetizersComponent } from './components/appetizers/appetizers.componen
 import { MaindishesComponent } from './components/maindishes/maindishes.component';
 import { DesertsComponent } from './components/deserts/deserts.component';
 import {FormsModule} from "@angular/forms";
-import { SingleitemComponent } from './components/singleitem/singleitem.component';
+import { SingleAppetizerComponent } from './components/single-appetizers/single-appetizer.component';
+import { SingleMaindishesComponent } from './components/single-maindishes/single-maindishes.component';
+import { SingleDesertsComponent } from './components/single-deserts/single-deserts.component';
+import { SingleWinesComponent } from './components/single-wines/single-wines.component';
+import { SingleDrinksComponent } from './components/single-drinks/single-drinks.component';
+import { SingleGalleriesComponent } from './components/single-galleries/single-galleries.component';
 
 
 @NgModule({
@@ -50,7 +55,12 @@ import { SingleitemComponent } from './components/singleitem/singleitem.componen
     AppetizersComponent,
     MaindishesComponent,
     DesertsComponent,
-    SingleitemComponent
+    SingleAppetizerComponent,
+    SingleMaindishesComponent,
+    SingleDesertsComponent,
+    SingleWinesComponent,
+    SingleDrinksComponent,
+    SingleGalleriesComponent
   ],
     imports: [
         HttpClientModule,

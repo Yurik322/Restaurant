@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingleitemComponent } from './singleitem.component';
+import { SingleDesertsComponent } from './single-deserts.component';
 
-describe('SingleitemComponent', () => {
-  let component: SingleitemComponent;
-  let fixture: ComponentFixture<SingleitemComponent>;
+describe('SingleDesertsComponent', () => {
+  let component: SingleDesertsComponent;
+  let fixture: ComponentFixture<SingleDesertsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SingleitemComponent ]
+      declarations: [ SingleDesertsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SingleitemComponent);
+    fixture = TestBed.createComponent(SingleDesertsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
