@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DesertsService} from '../../service/deserts.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-deserts',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesertsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private deserts: DesertsService,
+              private  route: Router) { }
+
+  Deserts: any[];
 
   ngOnInit(): void {
+    this.deserts.getDeserts().subscribe(data => {
+      this.Deserts = data;
+    });
+  }
+
+  getId(id: any) {
+    this.route.navigate([`deserts/${id}`])
   }
 
 }

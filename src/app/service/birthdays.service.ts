@@ -8,15 +8,15 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 
-export class AppetizersService {
+export class BirthdaysService {
 
   constructor(private http: HttpClient) { }
 
-  getAppetizers(): Observable<any>{
-    return this.http.get(`${config.HOST}/appetizers`);
+  getBirthdays(): Observable<any>{
+    return this.http.get(`${config.HOST}/birthdays`);
   }
 
   getById(id: number): Observable<any>{
-    return this.http.get(`${config.HOST}/appetizers/${id}`);
+    return this.http.get(`${config.HOST}/birthdays/${id}`);
   }
 }

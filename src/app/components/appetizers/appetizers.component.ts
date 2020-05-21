@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {AppetizersService} from '../../service/appetizers.service';
 import {Router} from "@angular/router";
 
@@ -22,7 +21,7 @@ export class AppetizersComponent implements OnInit {
   }
 
   getId(id: any) {
-    this.route.navigate([`appetizer/${id}`])
+    this.route.navigate([`appetizers/${id}`])
   }
 
 }

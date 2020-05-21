@@ -10,6 +10,6 @@ const appetizers = mongoose.Schema({
 
 }, { versionKey: false });
 
-const Appetizer = mongoose.model('appetizers', appetizers);
+const Deserts = mongoose.model('deserts', appetizers);
 
-module.exports = { Appetizer }
+module.exports = { Deserts }

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const appetizers = mongoose.Schema({
+const drinks = mongoose.Schema({
 
   id: {type: Number},
   name: {type: String},
@@ -10,6 +10,6 @@ const appetizers = mongoose.Schema({
 
 }, { versionKey: false });
 
-const Appetizer = mongoose.model('appetizers', appetizers);
+const Drinks = mongoose.model('drinks', drinks);
 
-module.exports = { Appetizer }
+module.exports = { Drinks }

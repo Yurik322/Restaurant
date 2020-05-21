@@ -29,6 +29,13 @@ app.get('/', (req, res) => {
 
 //Routes
 app.use('/api', require('./routes/appetizers'));
+app.use('/api', require('./routes/maindishes'));
+app.use('/api', require('./routes/deserts'));
+app.use('/api', require('./routes/wines'));
+app.use('/api', require('./routes/drinks'));
+app.use('/api', require('./routes/weddings'));
+app.use('/api', require('./routes/corporateparties'));
+app.use('/api', require('./routes/birthdays'));
 
 const { host, port } = config
 
