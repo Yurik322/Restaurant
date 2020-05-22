@@ -30,6 +30,8 @@ import { SingleDesertsComponent } from './components/single-deserts/single-deser
 import { SingleWinesComponent } from './components/single-wines/single-wines.component';
 import { SingleDrinksComponent } from './components/single-drinks/single-drinks.component';
 import { SingleGalleriesComponent } from './components/single-galleries/single-galleries.component';
+import {SorterPipe} from "./pipes/sorter";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 
 @NgModule({
@@ -60,13 +62,15 @@ import { SingleGalleriesComponent } from './components/single-galleries/single-g
     SingleDesertsComponent,
     SingleWinesComponent,
     SingleDrinksComponent,
-    SingleGalleriesComponent
+    SingleGalleriesComponent,
+    SorterPipe
   ],
     imports: [
         HttpClientModule,
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        Ng2SearchPipeModule
     ],
   providers: [],
   bootstrap: [AppComponent]

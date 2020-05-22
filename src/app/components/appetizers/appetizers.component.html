@@ -1,11 +1,45 @@
 <div id="types_of_menu_1" class="back">
   <div class="container-fluid text-center">
-    <h1>ЗАКУСКИ</h1><br>
+
+    <div class="row">
+      <div class="col-xs-4">
+
+        <div class="form-group">
+          <label>
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="term">
+          </label>
+        </div>
+
+      </div>
+      <div class="col-xs-4">
+        <h1>ЗАКУСКИ</h1>
+      </div>
+
+      <div class="col-xs-4"><br>
+
+        <div class="mb-3 btn-group" [(ngModel)]="model">
+
+          <select class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">
+            <option selected>ЦІНА</option>
+            <option value="1">
+              <input type="radio" [value]="true"> По зростанню
+            </option>
+            <option value="2">
+              <input type="radio" [value]="false"> По спаданю
+            </option>
+          </select>
+
+        </div>
+
+      </div>
+    </div><br>
+
+    <!--TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
     <div class="container-fluid">
       <div class="row">
 
-        <div *ngFor="let appetizer of Appetizers" class="col-sm-4 text-center">
+        <div *ngFor="let appetizer of Appetizers | filter:term" class="col-sm-4 text-center">
 
           <div class="thumbnail allAppetizers">
 
