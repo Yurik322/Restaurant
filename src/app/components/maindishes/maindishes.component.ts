@@ -13,6 +13,9 @@ export class MaindishesComponent implements OnInit {
               private  route: Router) { }
 
   Maindishes: any[];
+  term: string;
+
+  model=-1;
 
   ngOnInit(): void {
     this.maindishes.getMaindishes().subscribe(data => {
@@ -24,4 +27,7 @@ export class MaindishesComponent implements OnInit {
     this.route.navigate([`maindishes/${id}`])
   }
 
+  get data(){
+    return this.model;
+  }
 }

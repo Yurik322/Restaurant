@@ -15,6 +15,8 @@ export class AppetizersComponent implements OnInit {
   Appetizers: any[];
   term: string;
 
+  model=-1;
+
   ngOnInit(): void {
     this.appetizers.getAppetizers().subscribe(data => {
       this.Appetizers = data;
@@ -25,30 +27,7 @@ export class AppetizersComponent implements OnInit {
     this.route.navigate([`appetizers/${id}`])
   }
 
-
-
-
-
-
-  selected = '-1';
-  str = 'Усі';
-
-  model = true;
-
-  get by(){
-    return this.str;
-  }
-
-  get all(){
+  get data(){
     return this.model;
   }
-
-  getI(i: number) {
-    if(i === -1) {
-      this.str = 'Усі'
-    } else {
-      this.str = this.Appetizers[i];
-    }
-  }
-
 }

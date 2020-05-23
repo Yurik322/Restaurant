@@ -32,6 +32,7 @@ import { SingleDrinksComponent } from './components/single-drinks/single-drinks.
 import { SingleGalleriesComponent } from './components/single-galleries/single-galleries.component';
 import {SorterPipe} from "./pipes/sorter";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {NgbButtonsModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -65,13 +66,14 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     SingleGalleriesComponent,
     SorterPipe
   ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        Ng2SearchPipeModule
-    ],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule,
+    NgbButtonsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

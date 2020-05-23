@@ -2,26 +2,46 @@
   <div class="container-fluid text-center">
 
     <div class="row">
-      <div class="col-xs-4"></div>
+      <div class="col-xs-4"><br>
+        <div class="form-group">
+          <label>
+            <input type="text" class="form-control" placeholder="Пошук" [(ngModel)]="term">
+          </label>
+        </div>
+      </div>
       <div class="col-xs-4">
         <h1>НАПОЇ</h1>
       </div>
+
       <div class="col-xs-4"><br>
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">
-            ЦІНА <span class="caret"></span></button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">По зростанню</a></li>
-            <li><a href="#">По спаданню</a></li>
-          </ul>
+
+        <div class="mb-3">
+
+          <div class="btn-group" ngbRadioGroup [(ngModel)]="model">
+
+            <label ngbButtonLabel class="btn btn-secondary btn-sm">
+              <input ngbButton type="radio" [value]="-1">По замовчуванню
+            </label>
+
+            <label ngbButtonLabel class="btn btn-secondary  btn-sm">
+              <input ngbButton type="radio" [value]="1">По зростанню
+            </label>
+
+            <label ngbButtonLabel class="btn btn-secondary btn-sm">
+              <input ngbButton type="radio" [value]="0">По спаданю
+            </label>
+
+          </div>
         </div>
+
       </div>
-    </div><br>
+    </div>
+    <br>
 
     <div class="container-fluid">
       <div class="row">
 
-        <div *ngFor="let drinks of Drinks" class="col-sm-4 fack text-center">
+        <div *ngFor="let drinks of Drinks | filter:term | sorter:model" class="col-sm-4 fack text-center">
 
           <div class="thumbnail allDrinks">
 

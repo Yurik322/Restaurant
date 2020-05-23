@@ -13,6 +13,9 @@ export class WinesComponent implements OnInit {
               private  route: Router) { }
 
   Wines: any[];
+  term: string;
+
+  model=-1;
 
   ngOnInit(): void {
     this.wines.getWines().subscribe(data => {
@@ -22,5 +25,9 @@ export class WinesComponent implements OnInit {
 
   getId(id: any) {
     this.route.navigate([`wines/${id}`])
+  }
+
+  get data(){
+    return this.model;
   }
 }

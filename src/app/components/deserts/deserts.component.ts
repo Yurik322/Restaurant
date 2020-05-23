@@ -13,7 +13,9 @@ export class DesertsComponent implements OnInit {
               private  route: Router) { }
 
   Deserts: any[];
+  term: string;
 
+  model=-1;
   ngOnInit(): void {
     this.deserts.getDeserts().subscribe(data => {
       this.Deserts = data;
@@ -24,4 +26,7 @@ export class DesertsComponent implements OnInit {
     this.route.navigate([`deserts/${id}`])
   }
 
+  get data(){
+    return this.model;
+  }
 }
