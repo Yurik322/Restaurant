@@ -1,81 +1,125 @@
 <div id="content" class="back container-fluid">
 
   <div class="col-sm-6">
-  <div class="title">
-    <h1>Забронювати столик</h1>
-  </div>
-
-  <div class="article">
-    <p>
-      Залиште Ваш номер телефону і ім’я. Наш менеджер зв’яжеться з Вами найближчим часом для підтвердження
-      замовлення.<br>
-    </p>
-    <div role="form">
-
-      <form #records="ngForm" (ngSubmit)="success()" class="form">
-        <div>
-          <p>
-            <label> Ваше ім'я*<br>
-              <span>
-                <input required [(ngModel)]="record.name" type="text" name="your-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Введіть ім'я">
-              </span>
-            </label>
-          </p>
-
-          <p>
-            <label> Ваш телефон*<br>
-              <span>
-                <input required [(ngModel)]="record.phone" type="tel" name="tel-865" size="40" aria-required="true" aria-invalid="false">
-              </span>
-            </label>
-          </p>
-
-          <p>
-            <label> Вкажіть бажану дату<br>
-              <span>
-                <input required [(ngModel)]="record.date" type="date" name="date-212" value="" aria-invalid="false">
-              </span>
-            </label>
-          </p>
-
-          <p>
-            <label> Час<br>
-              <span>
-                <input required [(ngModel)]="record.time" type="text" name="text-782" value="" size="40" aria-invalid="false" placeholder="12:00 - 04:00">
-              </span>
-            </label>
-          </p>
-
-          <p>
-            <label> Кількість гостей<br>
-              <span>
-                <input required [(ngModel)]="record.quality" type="number" min="1" max="200" aria-invalid="false">
-              </span>
-            </label>
-          </p>
-
-
-          <p>
-            <input required [disabled]="records.invalid || diss" type="submit" class="btn btn-success" value="Надіслати" width="200px">
-          </p>
-        </div>
-
-        <div *ngIf="diss" class="alert alert-success">
-          <strong>Успішно!</strong> Дякуємо! Очікуйте дзвінок адміністратора для підтвердження вашого резервування.
-        </div>
-
-      </form>
+    <div class="title">
+      <h1>Забронювати столик</h1>
     </div>
-    <p></p>
-  </div>
+
+    <div class="article">
+      <p>
+        Залиште Ваш номер телефону та ім’я. Наш менеджер зв’яжеться з Вами найближчим часом для підтвердження
+        замовлення.<br>
+      </p>
+      <div role="form">
+        <form #records="ngForm" (ngSubmit)="success()" class="form">
+          <div>
+            <p>
+              <label> Ваше ім'я*<br>
+                <span>
+                  <input id="name" name="name" class="form-control" required minlength="3"
+                         [(ngModel)]="record.name" type="text" placeholder="Введіть ім'я" #name="ngModel">
+
+                  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                    <div *ngIf="name.errors.required">
+                      Ім'я обов'язково.
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                      Ім'я має бути не менше 3 символів.
+                    </div>
+                  </div>
+                </span>
+              </label>
+            </p>
+            <p>
+              <label> Ваш телефон*<br>
+                <span>
+                <input id="phone" name="phone" class="form-control" required minlength="10"
+                       [(ngModel)]="record.phone" type="tel" #phone="ngModel">
+
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+
+                  <div *ngIf="phone.errors.required">
+                    Потрібен телефон.
+                  </div>
+                  <div *ngIf="phone.errors.minlength">
+                    Телефон має бути не менше 10 символів.
+                  </div>
+                </div>
+                </span>
+              </label>
+            </p>
+            <p>
+              <label> Вкажіть бажану дату<br>
+                <span>
+                <input id="date" name="date" class="form-control" required min="2020-05-24" max="2021-12-12"
+                       [(ngModel)]="record.date" type="date" #date="ngModel">
+
+                <div *ngIf="date.invalid && (date.dirty || date.touched)" class="alert alert-danger">
+
+                  <div *ngIf="date.errors.required">
+                    Дата обов'язкова.
+                  </div>
+                </div>
+                </span>
+              </label>
+            </p>
+            <p>
+              <label> Час<br>
+                <span>
+                <input id="time" name="time" class="form-control" required minlength="2"
+                       [(ngModel)]="record.time" type="text" value="" placeholder="12:00 - 04:00" #time="ngModel">
+
+                <div *ngIf="time.invalid && (time.dirty || time.touched)" class="alert alert-danger">
+
+                  <div *ngIf="time.errors.required">
+                    Час потрібен.
+                  </div>
+                  <div *ngIf="time.errors.minlength">
+                    Час повинен бути не менше 2 символів.
+                  </div>
+                </div>
+                </span>
+              </label>
+            </p>
+            <p>
+              <label> Кількість гостей<br>
+                <span>
+                <input id="quality" name="quality" class="form-control" required minlength="1" min="1" max="200"
+                      [(ngModel)]="record.quality" type="number" value="" #quality="ngModel">
+
+                <div *ngIf="quality.invalid && (quality.dirty || quality.touched)" class="alert alert-danger">
+
+                  <div *ngIf="quality.errors.required">
+                    Вкажіть кількість гостей.
+                  </div>
+                  <div *ngIf="quality.errors.minlength">
+                    Введіть число.
+                  </div>
+                </div>
+                </span>
+              </label>
+            </p>
+            <p>
+              <input required [disabled]="records.invalid || diss" type="submit" class="btn btn-success btn-lg" value="Надіслати" width="200px">
+            </p>
+          </div>
+
+          <div *ngIf="diss" class="alert alert-success">
+            <strong>Успішно!</strong> Дякуємо! Очікуйте дзвінок адміністратора для підтвердження вашого резервування.
+          </div>
+
+        </form>
+
+      </div>
+      <p></p>
+    </div>
   </div>
 
   <div class="col-sm-6">
-
     <div class="container-fluid">
       <br>
       <img src="" class="reservation img-responsive" width="100%" alt="">
     </div>
-
   </div>
 </div>
