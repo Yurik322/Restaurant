@@ -3,8 +3,9 @@
   left: 0
   right: 0
   background: #39304b
-  margin: 20px -183px
-  padding: 0 183px
+  margin: 20px -200px
+  padding: 0 200px
+  z-index: 10
 
 nav
   display: block
@@ -24,7 +25,8 @@ ul
     position: relative
     z-index: 1
     padding: 0 16px
-    padding-bottom: 5px
+    padding-top: 3px
+    padding-bottom: 3px
 
     &:first-child
       margin-left: 0
@@ -39,7 +41,7 @@ ul
       white-space: nowrap
 
     &.home > a
-      background: url("src/images/home_icon.png") no-repeat top 17px center
+      background: url("src/images/home_icon.png") no-repeat top 14px center
       width: 17px
       height: 47px
 
@@ -54,7 +56,7 @@ ul
     width: 290px
     position: absolute
     top: 53px
-    left: 0px
+    left: 0
     background: #FFFFFF
 
     li
@@ -78,19 +80,19 @@ ul
         &:hover
           background: #39304b
           margin: 0
-          padding: 10px  0px 0px 0px
+          padding: 10px  0 0 0
 
       &:hover > a
         background: #39304b
         margin: 0
-        padding: 10px  0px 0px 0px
+        padding: 10px  0 0 0
 
   li:hover > ul
     display: block
 
   ul ul
     left: 149px
-    top: 0px
+    top: 0
 
 .mobile-menu
   display: none
@@ -136,7 +138,7 @@ ul
     position: absolute
     top: 0
     display: block
-    margin-top: 0px
+    margin-top: 0
     z-index: 999999
 
   nav
@@ -173,24 +175,24 @@ ul
       width: 100%
 
     li
-      background: rgba(255, 255, 255, 0.85) !important
+      background: rgba(255, 255, 255, 0.85)
 
     ul
       li
         a
           background: #e4e0df
-          color: #483f5c !important
-          border-bottom: 1px solid #a9a6b1 !important
+          color: #483f5c
+          border-bottom: 1px solid #a9a6b1
 
           &:hover
             background: #d5d3d2
             margin: 0
-            padding: 10px  0px 0px 0px
+            padding: 10px  0 0 0
 
         &:hover > a
           background: #d5d3d2
           margin: 0
-          padding: 10px  0px 0px 0px
+          padding: 10px  0 0 0
 
       ul
         left: 0
@@ -225,5 +227,5 @@ ul
     height: auto
     float: left
     background: #eeebe6
-    padding: 0px
+    padding: 0
     margin: 0 0 10px 0
